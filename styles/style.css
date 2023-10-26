@@ -232,11 +232,103 @@ justify-content: left;
   .noticia{
     font-family: 'Nunito', sans-serif; 
     font-size: 2em; 
-    margin-top: 5vh;
+    margin-top: 2vh;
   }
 
   div [class="carousel-inner"]
 {
   padding-left: 10%;
   padding-right: 10%;
+}
+
+.conInfoMateriais{
+  background-color:#F4F4F4;
+  width: calc(100vw - padding);
+  height: 90vh;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1.2em;
+}
+
+.tituloMateriais{
+  font-family: 'Nunito', sans-serif;
+  font-size: 5vh;
+  margin-top: 5vh; 
+}
+
+.cc{
+  display: flex;
+  flex-wrap: wrap;
+  width: 30vh;
+  height: auto;
+  margin: 5vh;
+  justify-content: center;
+}
+
+.h1{
+  height: 1vh;
+}
+
+.h5{
+  height: 5vh;
+}
+
+.h10{
+  height: 10vh;
+}
+
+.h15{
+  height: 15vh;
+}
+
+.h20{
+  height: 20vh;
+}
+
+.h30{
+  height: 30vh;
+}
+
+.h40{
+  height: 40vh;
+}
+
+.h50{
+  height: 50vh;
+}
+
+.containerContato{
+  background-color: #72A0C1;
+  width: calc(100vw - padding);
+  height: 90vh;
+  justify-content: center;
+  padding: 1.2em;
+}
+
+.accordion{
+  --bs-accordion-btn-bg:#72A0C1;
+  --bs-accordion-bg: #90b6d1de;
+  --bs-accordion-color:aliceblue;
+  --bs-accordion-btn-focus-border-color: unset;
+}
+
+.accordion-button{
+  border-top:1px solid #000000;
+}
+
+#fim{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+  font-size: 5vh;
+  color: #f4f4f4;
+  flex-direction: row;
+  display: flex;
+}
+
+#emailEco{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+  font-size: 3vh;
+  color: black;
+  display: flex;
 }
