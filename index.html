@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/icon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+     <link rel="stylesheet" media="(min-width:320px) and (max-width: 480px)" href="styles/style.css" />
+    <title>EcoMoment</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <!--início navbar-->
+
+	<nav class="navbar navbar-expand-lg" style="background-color: #4E9E5A; font-family: 'Nunito', sans-serif; font-size: 2,3vh;">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="imagens/icon.ico" width="100px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="paginas/noticias.html" style="color:aliceblue;">Notícias</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:aliceblue;">
+                Materiais
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="agrimensura.html">Metal</a></li>
+                <li><a class="dropdown-item" href="ds.html">Madeiras</a></li>
+                <li><a class="dropdown-item" href="edif.html">Papel e papelão</a></li>
+                <li><a class="dropdown-item" href="enf.html">Plástico</a></li>
+                <li><a class="dropdown-item" href="mec.html">Vidro</a></li>
+                <li><a class="dropdown-item" href="prot.html">Lixo orgânico</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="paginas/ideias.html" style="color:aliceblue;">Ideias</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contato" style="color:aliceblue;">Contato</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="paginas/sobre.html" style="color:aliceblue;">Sobre</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav me-2 my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link" aria-disabled="true" href="#login-modal" data-bs-toggle="modal" data-bs-target="#login-modal" style="color:aliceblue;">Entre</a>
+            </li> 
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn" type="submit" style="color:aliceblue;"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+        </div>
+</nav>
+        <!--fim navbar-->
+<!--Forms de login-->
+      <!-- Modals de Login e Cadastro -->
+    <!-- Modal login -->
+    <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true" style="background-color: #4E9E5A">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Faça a diferença no mundo você também!</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button> 
+                </div>
+                <div class="modal-body" style="background-color: #F4F4F4">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tab-list">
+                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login" aria-selected="true" style="color: black;">Entre</button>
+            
+                            <button class="nav-link" id="nav-cadastrar-tab" data-bs-toggle="tab" data-bs-target="#nav-cadastrar" type="button" role="tab" aria-controls="nav-cadastrar" aria-selected="true" style="color: black;">Cadastre-se</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active p-3" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab">
+                            <h2>Entrar</h2>
+                            <form class="needs-validation" novalidate>
+                                <label for="modal-email" class="form-label">E-mail:</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                                    <input type="email" class="form-control" id="modal-email" required>
+                                    <div class="invalid-feedback">Para poder continuar, digite o seu email!</div>
+                                    <!-- Tooltip -->
+                                    <span class="input-group-text">
+                                        <span class="tt" data-bs-placement="bottom" title="Insira seu email"><i class="bi bi-question-circle text-muted"></i></span>
+                                    </span>
+                                </div>
+            
+                                <label for="modal-senha" class="form-label">Senha:</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                    <input type="password" class="form-control" id="modal-senha" required>
+                                    <div class="invalid-feedback">Coloque a sua senha!</div>
+                                    <!-- Tooltip -->
+                                    <span class="input-group-text">
+                                        <span class="tt" data-bs-placement="bottom" title="Insira sua senha"><i class="bi bi-question-circle text-muted"></i></span>
+                                    </span>
+                                </div>
+                                <div class="btn-group my-3">
+                                    <button class="btn btn-md" type="submit" style="background-color: #4E9E5A">Entrar</button>
+                                    <button class="btn btn-md" type="button" style="background-color: #4E9E5A; border-left: 1px solid rgb(72,72,72);"><a href="https://accounts.google.com/?hl=pt-br" rel="external" target="_blank"><i class="bi bi-google" style="color: yellow;"></i></a></button>
+                                </div>
+                            </form>
+                        </div>
+            
+                        <div class="tab-pane fade show p-3" id="nav-cadastrar" role="tabpanel" aria-labelledby="nav-cadastrar-tab">
+                            <h2>Cadastre-se</h2>
+                            <form class="needs-validation" novalidate>
+                                <label for="name" class="form-label">Nome:</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                    <input type="text" class="form-control" id="name" required>
+                                    <div class="invalid-feedback">Seu nome completo!</div>
+                                    <!-- Tooltip -->
+                                    <span class="input-group-text">
+                                        <span class="tt" data-bs-placement="bottom" title="Seu nome completo!"><i class="bi bi-question-circle text-muted"></i></span>
+                                    </span>
+                                </div>
+            
+                                <label for="modal-email" class="form-label">E-mail:</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                                    <input type="email" class="form-control" id="modal-email" required>
+                                    <div class="invalid-feedback">Insira um email válido!</div>
+                                    <!-- Tooltip -->
+                                    <span class="input-group-text">
+                                        <span class="tt" data-bs-placement="bottom" title="Insira um email válido!"><i class="bi bi-question-circle text-muted"></i></span>
+                                    </span>
+                                </div>
+            
+                                <label for="modal-senha" class="form-label">Senha:</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                    <input type="password" class="form-control" id="modal-senha" required>
+                                    <div class="invalid-feedback">Coloque uma senha!</div>
+                                    <!-- Tooltip -->
+                                    <span class="input-group-text">
+                                        <span class="tt" data-bs-placement="bottom" title="Coloque uma senha!"><i class="bi bi-question-circle text-muted"></i></span>
+                                    </span>
+                                </div>
+                                <label for="modal-senha" class="form-label">Repita a senha:</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                    <input type="password" class="form-control" id="modal-senha" required>
+                                    <div class="invalid-feedback">Repita a senha!</div>
+                                    <!-- Tooltip -->
+                                    <span class="input-group-text">
+                                        <span class="tt" data-bs-placement="bottom" title="Repita a senha"><i class="bi bi-question-circle text-muted"></i></span>
+                                    </span>
+                                </div>
+                                <div class="btn-group my-3">
+                                    <button class="btn btn-md" type="submit" style="background-color: #4E9E5A;">Cadastrar</button>
+                                    <button class="btn btn-md" type="button" style="background-color: #4E9E5A; border-left: 1px solid rgb(72,72,72);"><a href="https://accounts.google.com/?hl=pt-br" rel="external" target="_blank"><i class="bi bi-google" style="color: yellow;"></i></a></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Modal cadastro -->
+    <div class="modal fade" id="cadastro-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog"> 
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Crie uma nova conta!</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button> 
+                </div>
+                <div class="modal-body">         
+                        <div class="tab-pane fade show active p-3" id="nav-cadastrar-2" role="tabpanel" aria-labelledby="nav-cadastrar-2-tab">
+                            <h2>Cadastre-se</h2>
+                            <form class="needs-validation" novalidate>
+                                <label for="name" class="form-label">Nome:</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                    <input type="text" class="form-control" id="name" required>
+                                    <div class="invalid-feedback">Insira seu nome para continuar</div>
+                                    <!-- Tooltip -->
+                                    <span class="input-group-text">
+                                        <span class="tt" data-bs-placement="bottom" title="Insira seu nome"><i class="bi bi-question-circle text-muted"></i></span>
+                                    </span>
+                                </div>
+            
+                                <label for="modal-email" class="form-label">E-mail:</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                                    <input type="email" class="form-control" id="modal-email" required>
+                                    <div class="invalid-feedback">Insira seu e-mail para continuar</div>
+                                    <!-- Tooltip -->
+                                    <span class="input-group-text">
+                                        <span class="tt" data-bs-placement="bottom" title="Insira seu email"><i class="bi bi-question-circle text-muted"></i></span>
+                                    </span>
+                                </div>
+            
+                                <label for="modal-senha" class="form-label">Senha:</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                    <input type="password" class="form-control" id="modal-senha" required>
+                                    <div class="invalid-feedback">Insira sua senha para continuar</div>
+                                    <!-- Tooltip -->
+                                    <span class="input-group-text">
+                                        <span class="tt" data-bs-placement="bottom" title="Insira sua senha"><i class="bi bi-question-circle text-muted"></i></span>
+                                    </span>
+                                </div>
+                                <div class="btn-group my-3">
+                                    <button class="btn btn-md" type="submit" style="background-color: #4E9E5A;">Cadastrar</button>
+                                    <button class="btn btn-md" type="button" style="background-color: #4E9E5A; border-left: 1px solid rgb(72,72,72);"><a href="https://accounts.google.com/?hl=pt-br" rel="external" target="_blank"><i class="bi bi-google"></i></a></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script> 
+        const tooltipTriggerList = document.querySelectorAll('.tt') //.tt é a classe que declaramos na tooltip
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script> <!-- Utilizado para habilitar as tooltips-->
+  
+    <script type="text/javascript"> //Para as validações
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+    </script>
+  
+    <!--Fim do forms de login-->
+
+    <!--Início landing page--->
+   <div class="containerLanding container-fluid">
+        <div class="row">
+          <div class="col-lg-1 d-none d-lg-block" ></div>
+          <div class="col-sm-12 col-lg-5" style="margin-top: 25vh;">
+            <h1 class="ml3 fw-bold">Reciclar e reutilizar, não deixe o momento passar!</h1>
+            <p id="bordao">Aqui suas ideias são salvadoras!</p>
+            <div class="cenbtn">
+              <button class="button" style="font-size: 3vh;">Veja mais</button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 d-none d-lg-block">
+            <img id="gif" src="imagens/gifInicio.gif" class="img-fluid" alt="gif">
+          </div>
+        </div>
+      </div>
+        <!---Fim da landing page-->
+
+      <!--Início mapa--->
+
+      <div class="conMapa container-fluid">
+        <div class="row">
+         <div class="col-lg-6 col-md-6 col-sm-12" style="margin-top: 20vh; margin-left: 10vh;">
+            <p class="texto1mapa texto">
+              Conheça nosso mapa de pontos de coleta mais próximos da sua casa!
+            </p>
+            <p class="texto2mapa texto">
+              Para descobrir os pontos de coletas próximos de sua casa é simples! 
+              <br>
+              Digite o seu CEP abaixo e confira.
+            </p>
+      
+            <div class="search">
+              <div class="search-box">
+                <div class="search-field">
+                  <input placeholder="Conheça..." class="input" type="text">
+                  <div class="search-box-icon">
+                    <button class="btn-icon-content">
+                      <i class="search-icon">
+                        <svg xmlns="://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" fill="#fff"></path></svg>
+                      </i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14738.302984187023!2d-47.419087502272156!3d-22.557560011791693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c88082d6720c33%3A0x2804dd64dab85840!2sEcoponto%20-%20Anavec!5e0!3m2!1spt-BR!2sbr!4v1696874515450!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="img-fluid"></iframe>
+          </div>
+        </div>
+      </div>  
+      
+      <div class="conNoticias container-fluid">
+        <div class="row">
+          <div class="col-md-5"></div>
+          <div class="col-md-7 col-sm-12">
+            <p class="noticia fw-bold"> Notícias</p>
+          </div>
+      
+          <div id="carouselExampleDark" class="carousel carousel-dark slide col-md-12 col-sm-12">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img class="d-block w-100 img-fluid imgNoticia" src="imagens/imagem1.png" style="width: 60vh; height: 75vh;">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5></h5>
+                  <p></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="imagens/imagem2.png" class="d-block w-100 img-fluid imgNoticia" style="width: 60vh; height: 75vh;">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5></h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+          </div>
+        </div>
+      </div>
+       <!---final container notícias-->
+</body>
+</html>
